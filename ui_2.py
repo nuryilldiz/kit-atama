@@ -840,9 +840,9 @@ C_SHIFT_X = 0  # C shift artık layout içinde dahil edildi
 
 # ── BACKEND ───────────────────────────────────────────────────────────────────
 _dosya_adi = os.path.join(os.path.dirname(__file__), "..", "kit_atama_model (1).py")
-_spec = importlib.util.spec_from_file_location("kit_atama_model (1)", _dosya_adi)
+_spec = importlib.util.spec_from_file_location("kit_atama_model", _dosya_adi)
 _mod  = importlib.util.module_from_spec(_spec)
-sys.modules["kit_atama_model (1)"] = _mod
+sys.modules["kit_atama_model"] = _mod
 _spec.loader.exec_module(_mod)
 
 def model_calistir(dosya_bytes, b_max, max_kor, t_limit, mip_gap):
